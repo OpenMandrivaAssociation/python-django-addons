@@ -13,7 +13,7 @@ URL:            http://bitbucket.org/indifex/django-addons
 Source:         %{realname}-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildArch:      noarch
-BuildRequires:  python-devel python-setuptools
+BuildRequires:  python-devel python-setuptools python-django
 Requires:       python-django
 
 %description
