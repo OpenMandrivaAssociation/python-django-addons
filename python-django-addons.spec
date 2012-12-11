@@ -56,3 +56,18 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 %doc README LICENSE AUTHORS
 %{py_puresitedir}/*
+
+
+%changelog
+* Fri Nov 12 2010 Ahmad Samir <ahmadsamir@mandriva.org> 0.6.4-1mdv2011.0
++ Revision: 596461
+- Update to 0.6.4
+- Update Summary, Source, URL and Description tags
+- Add requires on python-django-staticfiles
+- Add suggests on python-django-notification
+
+* Tue Nov 02 2010 Ahmad Samir <ahmadsamir@mandriva.org> 0.1-1mdv2011.0
++ Revision: 591993
+- add BR python-django
+- import python-django-addons
+
