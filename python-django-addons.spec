@@ -4,14 +4,13 @@
 %define release   %mkrel 1
 
 Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Version:        0.6.6
+Release:        1
 Summary:        Addon framework to create pluggable Django addons
 Group:          Development/Python
 License:        BSD
 URL:            http://pypi.python.org/pypi/django-addons
-Source:         http://pypi.python.org/packages/source/d/django-addons/%{realname}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+Source:         http://pypi.python.org/packages/source/d/django-addons/django-addons-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel python-setuptools python-django
 Requires:       python-django python-django-staticfiles
@@ -45,12 +44,10 @@ Features
 python setup.py build
 
 %install
-rm -rf %{buildroot}
 python setup.py install --root %{buildroot}
 rm -f %{buildroot}/usr/django_addons/templates/addons.html
 
 %clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
@@ -70,4 +67,5 @@ rm -rf %{buildroot}
 + Revision: 591993
 - add BR python-django
 - import python-django-addons
+
 

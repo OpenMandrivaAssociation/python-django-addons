@@ -1,2 +1,4 @@
+removed_sources:
+  django-addons-0.6.4.tar.gz: 7060461927b4e7123b6966cdae12184e51b38dcf
 sources:
-  "django-addons-0.6.4.tar.gz": 7060461927b4e7123b6966cdae12184e51b38dcf
+  django-addons-0.6.6.tar.gz: 897d88d9a2b24941ac9c4273fd70ad3568ecea14
