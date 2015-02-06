@@ -1,11 +1,11 @@
 %define realname  django-addons
 %define name      python-%{realname}
 %define version   0.6.4
-%define release   %mkrel 1
+%define release   2
 
 Name:           %{name}
 Version:        0.6.6
-Release:        1
+Release:        2
 Summary:        Addon framework to create pluggable Django addons
 Group:          Development/Python
 License:        BSD
