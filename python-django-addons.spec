@@ -4,17 +4,18 @@
 %define release   2
 
 Name:           %{name}
-Version:        0.6.6
-Release:        2
+Version:        2.0.1
+Release:        1
 Summary:        Addon framework to create pluggable Django addons
 Group:          Development/Python
 License:        BSD
-URL:            http://pypi.python.org/pypi/django-addons
-Source:         http://pypi.python.org/packages/source/d/django-addons/django-addons-%{version}.tar.gz
+URL:            https://pypi.python.org/pypi/django-addons
+Source:         https://pypi.python.org/packages/source/d/django-addons/django-addons-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  python-devel python-setuptools python-django
+BuildRequires:  python-django
 Requires:       python-django python-django-staticfiles
 Suggests:       python-django-notification
+BuildSystem:	python
 
 %description
 A Django app used to add true plug-n-play functionality to your own Django
@@ -37,35 +38,9 @@ Features
 * Per addon settings
 * Disabling addons via ./manage.py addons
 
-%prep
-%setup -q -n %{realname}-%{version}
-
-%build
-python setup.py build
-
-%install
-python setup.py install --root %{buildroot}
+%install -a
 rm -f %{buildroot}/usr/django_addons/templates/addons.html
 
-%clean
-
 %files
-%defattr(-,root,root,-)
-%doc README LICENSE AUTHORS
-%{py_puresitedir}/*
-
-
-%changelog
-* Fri Nov 12 2010 Ahmad Samir <ahmadsamir@mandriva.org> 0.6.4-1mdv2011.0
-+ Revision: 596461
-- Update to 0.6.4
-- Update Summary, Source, URL and Description tags
-- Add requires on python-django-staticfiles
-- Add suggests on python-django-notification
-
-* Tue Nov 02 2010 Ahmad Samir <ahmadsamir@mandriva.org> 0.1-1mdv2011.0
-+ Revision: 591993
-- add BR python-django
-- import python-django-addons
-
-
+%{py_puresitedir}/django_addons
+%{py_puresitedir}/django_addons-%{version}-*-info
