@@ -5,7 +5,7 @@
 
 Name:           %{name}
 Version:        2.0.1
-Release:        1
+Release:        2
 Summary:        Addon framework to create pluggable Django addons
 Group:          Development/Python
 License:        BSD
