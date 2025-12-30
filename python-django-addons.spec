@@ -1,11 +1,11 @@
 %define realname  django-addons
 %define name      python-%{realname}
 %define version   0.6.4
-%define release   2
+%define release   3
 
 Name:           %{name}
 Version:        2.0.1
-Release:        2
+Release:        3
 Summary:        Addon framework to create pluggable Django addons
 Group:          Development/Python
 License:        BSD
